@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+
+    <!--CSS customizado-->
+    <link rel="stylesheet" href="css/styles.css" />
+
+    <title>Exemplo Form</title>
+  </head>
+
+  <body class="container">
+    <header id="topo" class="mb-3 text-center">
+      <img id="topo-logo" class="" src="img/logo.png" alt="logo" />
+      <h2>Informações de Pagamento</h2>
+    </header>
+
+    <main class="mt-5">
+      <div class="row">
+        <div class="col-md-7 col-lg-8">
+          <h4 class="mb-3">Endereço de cobrança</h4>
+
+          <form id="form" class="needs-validation" novalidate>
+            <div class="row g-3">
+              <div class="col-6">
+                <label for="nome" class="form-label">Nome</label>
+                <input type="text" class="form-control" id="nome" />
+                <div id="inv-nome" class="invalid-feedback">
+                  Campo obrigatório.
+                </div>
+              </div>
+
+              <div class="col-6">
+                <label for="sobrenome" class="form-label">Sobrenome</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="sobrenome"
+                  placeholder=""
+                  value=""
+                  required
+                />
+                <div id="inv-sobrenome" class="invalid-feedback">
+                  Campo obrigatório.
+                </div>
+              </div>
+
+              <div class="col-9">
+                <label for="endereco" class="form-label">Endereço</label>
+                <input type="text" class="form-control" id="endereco" />
+                <div id="inv-endereco" class="invalid-feedback">
+                  Campo obrigatório.
+                </div>
+              </div>
+
+              <div class="col-3">
+                <label for="numero" class="form-label">Número</label>
+                <input type="number" class="form-control" id="numero" />
+                <div id="inv-num" class="invalid-feedback">
+                  Campo obrigatório.
+                </div>
+              </div>
+
+              <div class="col-6">
+                <label for="estado" class="form-label">Estado</label>
+                <select class="form-select" id="estado" required>
+                  <option value="">Selecione...</option>
+                  <option value="al">Alagoas</option>
+                  <option value="pb">Paraíba</option>
+                  <option value="pe">Pernambuco</option>
+                </select>
+              </div>
+
+              <div class="col-6">
+                <label for="cidade" class="form-label">Cidade</label>
+                <select class="form-select" id="cidade" required>
+                  <option value="">Selecione...</option>
+                  <option value="olinda">Olinda</option>
+                  <option value="recife">Recife</option>
+                </select>
+                <div class="invalid-feedback">
+                  Please provide a valid state.
+                </div>
+              </div>
+            </div>
+
+            <hr class="my-4" />
+
+            <div id="check-salvar-info" class="form-check">
+              <input
+                type="checkbox"
+                class="form-check-input"
+                id="salvar-info"
+              />
+              <label class="form-check-label" for="salvar-info"
+                >Salvar as informações para as próximas compras.</label
+              >
+            </div>
+
+            <hr class="my-4" />
+
+            <h4 class="mb-3">Pagamento</h4>
+
+            <div class="my-3">
+              <div class="form-check">
+                <input
+                  id="debito"
+                  name="forma-pagamento"
+                  type="radio"
+                  class="form-check-input"
+                  checked
+                />
+                <label class="form-check-label" for="debito">Débito</label>
+              </div>
+
+              <div class="form-check">
+                <input
+                  id="credito"
+                  name="forma-pagamento"
+                  type="radio"
+                  class="form-check-input"
+                />
+                <label class="form-check-label" for="credito">Crédito</label>
+              </div>
+
+              <div class="form-check">
+                <input
+                  id="pix"
+                  name="forma-pagamento"
+                  type="radio"
+                  class="form-check-input"
+                />
+                <label class="form-check-label" for="pix">Pix</label>
+              </div>
+            </div>
+
+            <hr class="my-4" />
+
+            <button id="submit" class="w-100 btn btn-primary btn-lg" type="submit">
+              Finalizar pagamento
+            </button>
+          </form>
+        </div>
+      </div>
+    </main>
+
+    <footer class="pt-5 mt-2 text-muted text-center text-small">
+      <p class="mb-1">
+        &copy; 2017–<span id="rodape-ano"></span> Loja Qualquer
+      </p>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
